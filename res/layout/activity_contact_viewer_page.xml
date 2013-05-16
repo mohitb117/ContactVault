@@ -1,0 +1,75 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp" 
+    >
+
+    <TableLayout
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_centerHorizontal="true"
+        android1:layout_centerVertical="true" 
+        >
+
+        <TableRow
+            android1:id="@+id/tableRow1"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content" >
+
+            <LinearLayout
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:gravity="center" >
+
+                <Button
+                    android1:id="@+id/signout"
+                    android1:layout_width="74dp"
+                    android1:layout_height="wrap_content"
+                    android1:onClick="signOut"
+                    android1:text="Sign Out" />
+
+                <Button
+                    android1:id="@+id/button1"
+                    android1:layout_width="116dp"
+                    android1:layout_height="wrap_content"
+                    android1:text="Export All Contacts" 
+                    android1:onClick="exportAllContacts"
+                 />
+
+                <Button
+                    android1:id="@+id/updateCButton"
+                    android1:layout_width="122dp"
+                    android1:layout_height="match_parent"
+                    android1:onClick="AddNewContactButton"
+                    android1:text="Add New Contact" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android1:id="@+id/tableRow2"
+            android1:layout_width="fill_parent"
+            android1:layout_height="fill_parent" 
+            >
+
+            <ListView
+                android1:id="@android:id/list"
+                android1:layout_width="300dp" >
+            </ListView>
+			
+			<TextView android1:id="@id/android:empty"
+			 		  android1:text="You have no Contacts to Display"
+			 		  android1:layout_height="fill_parent"
+			 		  android:layout_width="fill_parent"
+			 		  android1:textSize="20sp"
+			 		  android1:gravity="center_vertical|center_horizontal"   
+			 />
+			
+        </TableRow>
+
+    </TableLayout>
+ 
+</RelativeLayout>
